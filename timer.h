@@ -10,7 +10,7 @@ u64 currentSeconds() {
     auto now_ms = std::chrono::time_point_cast<std::chrono::nanoseconds>(now);
     auto epoch = now_ms.time_since_epoch();
     auto value = std::chrono::duration_cast<std::chrono::nanoseconds>(epoch);
-    return value.count() / 1000000000;
+    return value.count() / 1000000;
 }
 
 #endif
